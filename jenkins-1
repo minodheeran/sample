@@ -1,0 +1,12 @@
+ pipeline {
+     agent any
+     
+stages {
+           stage ('SCM') {
+             steps {
+                cleanWs ()
+               git credentialsID: 'github_cred_45210785', url: 'https://a1m-github.systems.uk.hsbc/45210785/performacetestapi.git'
+             }
+        }
+   }
+}   
